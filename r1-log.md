@@ -30,3 +30,4 @@ If time permits, OpenCV, machine learning or learn new language i.e. JS or Go?
 - We'll see if I ever reach this last stage (final 30 days)
 
 ### R1D1
+Re-learn the basic of git. Try to applied on reveal.js directory project (pull to bitbucket remote repo). It's more complex than I imagined. lol
