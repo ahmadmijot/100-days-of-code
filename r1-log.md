@@ -31,3 +31,6 @@ If time permits, OpenCV, machine learning or learn new language i.e. JS or Go?
 
 ### R1D1
 Re-learn the basic of git. Try to applied on reveal.js directory project (pull to bitbucket remote repo). It's more complex than I imagined. lol
+
+### R1D2
+Learnt about git rebase. Did I just screwed up with my repo?
