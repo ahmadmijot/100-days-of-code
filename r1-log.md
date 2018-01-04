@@ -35,5 +35,5 @@ Re-learn the basic of git. Try to applied on reveal.js directory project (pull t
 ### R1D2 [Jan 3]
 Learnt about git rebase. Did I just screwed up with my repo?
 
-[Jan 4]
+### [Jan 4]
 Study for exam
