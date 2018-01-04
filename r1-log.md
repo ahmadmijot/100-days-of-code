@@ -4,7 +4,7 @@ The log of my #100DaysOfCode challenge. Started on [Jan 1, Monday, 2018].
 
 ## Log
 
-### R1D0 (Yes I start at Day 0)
+### R1D0 (Yes I start at Day 0) [Jan 1]
 #### Planning and reasoning
 Throughout this 100 days of code, I plan to learn about:
 - Git (properly, via CLI) (first 15 days?)
@@ -29,8 +29,11 @@ If time permits, OpenCV, machine learning or learn new language i.e. JS or Go?
 - But then Golang seems nice language to learn. Esp to understand under the hood like concurrency and low level stuff. Can compare with Fortran for implementation.
 - We'll see if I ever reach this last stage (final 30 days)
 
-### R1D1
+### R1D1 [Jan 2]
 Re-learn the basic of git. Try to applied on reveal.js directory project (pull to bitbucket remote repo). It's more complex than I imagined. lol
 
-### R1D2
+### R1D2 [Jan 3]
 Learnt about git rebase. Did I just screwed up with my repo?
+
+[Jan 4]
+Study for exam
