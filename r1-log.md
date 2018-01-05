@@ -37,3 +37,7 @@ Learnt about git rebase. Did I just screwed up with my repo?
 
 ### [Jan 4]
 Study for exam
+
+### R1D3 [Jan 5]
+Learn about graph theory and fundamental about git. Reading time (no coding).
+*bookmark*: [latest reading](http://think-like-a-git.net/sections/graphs-and-git/the-reference-reference.html)
