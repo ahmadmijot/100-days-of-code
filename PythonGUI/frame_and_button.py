@@ -11,15 +11,18 @@ from tkinter import ttk
 def main():
     root = tkinter.Tk()
 
-    frame1 = ttk.Frame(root, padding=10)
+    frame1 = ttk.Frame(root, padding=25)
     frame1.grid()
 
     go_forward_button = ttk.Button(frame1, text='Forward')
     go_forward_button.grid()
 
+    go_backward_button = ttk.Button(frame1, text='Backward')
+    go_backward_button.grid()
+
     root.mainloop()
 
-    print('\n Program closed')
+    print('\n Program closed!')
 
 
 #----
