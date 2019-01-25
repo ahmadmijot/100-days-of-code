@@ -27,6 +27,7 @@ def main():
     print_stuff_button.grid()
 
     go_button_test = ttk.Button(frame2, text='test')
+    go_button_test['command'] = (lambda: print_here())
     go_button_test.grid()
 
     root.mainloop()
@@ -49,6 +50,8 @@ def do_stuff():
     
     print('\n', rand_word)
 
+def print_here():
+    print('here!\n')
 
 main()
 
