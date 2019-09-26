@@ -1,0 +1,4 @@
+[Rust]
+members = [
+    "hello.rs"
+]
