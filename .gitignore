@@ -1,2 +1,4 @@
 old-challenge/
 *.md
+src/*.exe
+src/*.pdb
