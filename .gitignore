@@ -1,4 +1,4 @@
 old-challenge/
 *.md
-Rust/src/*.exe
-Rust/src/*.pdb
+*.exe
+*.pdb
