@@ -16,7 +16,7 @@ I code Python for my research project, Rust for tutorial (I have no idea about w
 
 So for today R0D0, I start with Rust tutorial. Let's git started.
 
-
+---
 
 ### Day 0: September 26, 2019
 
@@ -26,3 +26,20 @@ So for today R0D0, I start with Rust tutorial. Let's git started.
 P/s: I forgot how to change terminal in VS Code to bash! End up with Powershell.
 
 **Link to work:** Stop at  [adding things up](http://stevedonovan.github.io/rust-gentle-intro/1-basics.html#adding-things-up).
+
+---
+### Day 1: September 30, 2019
+
+**Note**: Skip a couple of days since I stayed up in my friends home and later went back to my hometown (I don't have laptop to do any works there)
+**Today's Progress**: Change tutorial from A Gentle Intro to [Rust to The Rust Programming Language by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/index.html#the-rust-programming-language) since it cover about Rust from very basic, including how to set up Rust environment and how to use Cargo from the very beginning.
+
+**p/s:** While I'm writing this log, suddenly blackout! Part of the writin was missing. And I can't update it on time.
+
+**Link to work:** Cover [Chapter 2: Programming a Guessing Game](https://www.simonpbriggs.co.uk/rust.pdf)
+
+---
+### Day 2: October 1, 2019
+
+**Today's progress:** I stayed up in my friend's house and can't do anything regarding coding. But I read [Chapeter 3: Common Programming Concept](https://www.simonpbriggs.co.uk/rust.pdf) up until Functions.
+
+**Link to work:** TODO: Cover Comments and Control Flow. Try to understand and code Ownership.
