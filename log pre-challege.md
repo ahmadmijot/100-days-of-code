@@ -40,6 +40,26 @@ P/s: I forgot how to change terminal in VS Code to bash! End up with Powershell.
 ---
 ### Day 2: October 1, 2019
 
-**Today's progress:** I stayed up in my friend's house and can't do anything regarding coding. But I read [Chapeter 3: Common Programming Concept](https://www.simonpbriggs.co.uk/rust.pdf) up until Functions.
+**Today's progress:** I stayed up in my friend's house and can't do anything regarding coding. But I read [Chapter 3: Common Programming Concept](https://www.simonpbriggs.co.uk/rust.pdf) up until Functions.
 
 **Link to work:** TODO: Cover Comments and Control Flow. Try to understand and code Ownership.
+
+---
+### Day 3: October 2, 2019
+
+**Today's Progress:** Manage to do control flow chapter of Rust programming book. Also tried to setup OctoPi for my 3D printer project (Ender 3 Pro). But can't do ssh maybe problem with WiFi setup and due to the screen resolution is wet too high for my 3.5 Inch display. Need to change it later.
+
+**p/s:** Today I get asked from someone about building a web page for some conference. I rejected the offer due to my lack understanding about web dev and Javascript. Another todo list: know how to build a basic web page.
+
+**p/s2:** Tomorrow I will be out of town for some work for four days. I don't know how to do this challege for the whole time there.
+
+**Link to work:**
+
+
+
+---
+### Day : October , 2019
+
+**Today's Progress:**
+
+**Link to work:**
