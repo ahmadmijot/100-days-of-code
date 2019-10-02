@@ -11,6 +11,8 @@ For my PhD work, I need to understand and code with Python and a bit of Fortran,
 
 I'm currently busy with my experiment seup and got involved with other research projects. I think I may not able to religiously code everyday, but I'll try my best. Even if I code twice a week, but consistently do it, I satisfied.
 
+---
+
 ### Planning
 I code Python for my research project, Rust for tutorial (I have no idea about what kind of project that I can do with Rust), and sometimes poking around web development. So in this stage, I will shift between these two language, one for my real life research project, the other just for the sake of learning.
 
@@ -53,10 +55,10 @@ P/s: I forgot how to change terminal in VS Code to bash! End up with Powershell.
 
 **p/s2:** Tomorrow I will be out of town for some work for four days. I don't know how to do this challege for the whole time there.
 
-**Link to work:**
+**Link to work:** for [OctoPi](https://octoprint.org/download/)
 
 
-
+---
 ---
 ### Day : October , 2019
 
