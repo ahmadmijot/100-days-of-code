@@ -10,11 +10,7 @@ fn main() {
 
 fn flow_func() {
     let condition = true;
-    let number = if condition {
-        "six"
-    } else {
-        "five"
-    };
+    let number = if condition { "six" } else { "five" };
 
     println!("The value of number is: {}", number);
 }
@@ -26,7 +22,7 @@ fn loop_func() {
 
     let result = loop {
         counter += 1;
-        println!("{}",counter);
+        println!("{}", counter);
 
         if counter == 10 {
             break counter * 2;
@@ -35,4 +31,3 @@ fn loop_func() {
 
     println!("The result is {}", result);
 }
-

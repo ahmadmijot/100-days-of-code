@@ -2,6 +2,12 @@
 /*
 to compile: rustc file.rs
 to execute: ./file
+
+using Cargo
+to start new project: cargo new hello_cargo
+                      cd hello_cargo
+to execute: cargo run
+check codes compile but bot produce executable: cargo check
 */
 
 fn main() {

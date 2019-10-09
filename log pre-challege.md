@@ -59,6 +59,25 @@ P/s: I forgot how to change terminal in VS Code to bash! End up with Powershell.
 
 
 ---
+### Day 3.5: October 3-7, 2019
+
+**Today's Progress:** During this period, I read (but not code) about Rust Control Flow and [Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) concept.
+
+---
+### Day 4: October 8, 2019
+
+**Today's Progress:** I tried to visualised my progress using git-like graph. I tried using [gitgraph/js](https://gitgraphjs.com/#0) however it's quite tricky to change it to suit my purpose where I can't remove hash number but other than that it seems easy to use provided that I know enough about Javascript framework.
+
+For Rust programming, I tried poking around [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html) but it seems that the author assumed the readers have basic knowledge about Rust language, i.e. syntax and how to create and run library-ish. After I cover the basic about Rust, I might be try to read this book.
+
+---
+### Day 5: October 9, 2019
+
+**Today's Progress:** Finish about Rust ownership (part I?)
+A bit lost on the later part of the chapter.
+
+**Link to work:** next is [References and Borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
+
 ---
 ### Day : October , 2019
 
