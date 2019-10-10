@@ -79,6 +79,13 @@ A bit lost on the later part of the chapter.
 **Link to work:** next is [References and Borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
 
 ---
+### Day 6: October 10, 2019
+
+**Today's Progress:** Finish about Rust References and Borrowing. I'm not really  understand about this concept though. Might read and practice about it later.
+
+**Link to work:** [The Slice Type](https://doc.rust-lang.org/book/ch04-03-slices.html)
+
+---
 ### Day : October , 2019
 
 **Today's Progress:**

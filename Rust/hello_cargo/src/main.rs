@@ -64,6 +64,7 @@ fn makes_copy(some_integer: i32) { // some_integer comes into scope
 
 m*/
 
+/* 
 // Return values and scope
 // Return values and transfer ownership
 
@@ -87,3 +88,19 @@ fn gives_ownership() -> String {    //gives_ownership move its return value into
 fn takes_and_gives_back(a_string: String) -> String { // a_string comes into scope
     a_string //a_string returned and moves out to calling fn
 }
+
+*/
+
+// References and Borrowing
+// & = references, refer value w/o taking ownership
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1);
+    println!("The length if {} is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize { //s is reference to a String
+    s.len()
+} // Here, s goes out of scope but because it does not have ownership of 
+    // what it refers to, nothing happens.
