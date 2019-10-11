@@ -85,6 +85,28 @@ A bit lost on the later part of the chapter.
 
 **Link to work:** [The Slice Type](https://doc.rust-lang.org/book/ch04-03-slices.html)
 
+
+
+---
+### Day 7: October 11, 2019
+
+**Today's Progress:** Today I tried to create a game in Rust (Roguelike). 
+__Notes__:
+1. Author use different way to execute program (cargo run --release). I stick to cargo check
+2. Typo and syntax error. My main weakness so far. Mostly on ";" and on a lesser extend, "()".
+3. Rust: 
+   1. use xx::yy::zz
+4. is similar to Python:
+   1. import xx.yy.zz
+5. Convention: use UPPERCASE letter for const
+6. New thing that still not covered by reading Rust-lang: book:
+   1. use
+   2. struct
+   3. cargo new --bin. The "--bin" part
+
+**Link to work:** [Graphics](https://tomassedovic.github.io/roguelike-tutorial/part-1-graphics.html)
+
+
 ---
 ### Day : October , 2019
 
