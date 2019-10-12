@@ -92,7 +92,7 @@ A bit lost on the later part of the chapter.
 
 **Today's Progress:** Today I tried to create a game in Rust (Roguelike).
  
-__Notes__:
+*Notes*:
 1. Author use different way to execute program (cargo run --release). I stick to cargo check
 2. Typo and syntax error. My main weakness so far. Mostly on ";" and on a lesser extend, "()".
 3. Rust: 
@@ -106,6 +106,33 @@ __Notes__:
    3. cargo new --bin. The "--bin" part
 
 **Link to work:** [Graphics](https://tomassedovic.github.io/roguelike-tutorial/part-1-graphics.html)
+
+
+---
+### Day 8: October 13, 2019
+
+**Today's Progress:** Continue create a Roguelike game in Rust
+
+__*Notes Part One*__:
+* Line 78 `tcod.root.wait_for_keypress(true);` is not present in this or later tutorial (present in Graphic tutorial [1a-render]), can ask them later about this?
+* If the name is different than `main.rs`, need to declare in Cargo.toml file, say `test.rs` as:
+    ```rust
+    [[bin]]
+    name = "test"
+    path = "src/test.rs"
+    ```
+* If `use` is use inside function, it will only available for that function.
+* Function signature in Rust: `fn func_name(param:type, ..) -> return type`.
+* `(param:type,..)` the ".." means don't care about other fields
+* `_=>{}` = value that matches everything else.
+
+__*Notes Part Two*__:
+* Today I learned a bit about class (`Object` part in Part-2a). I think this is an OOP concept. At last I learned something from OOP. In Rust?
+* `dyn` is a trait and not a concrete type (such as `struct` or `enum`).
+* Learned a concept of "blit".
+
+**Link to work:** [Generalising](https://tomassedovic.github.io/roguelike-tutorial/part-2-object-map.html)
+
 
 
 ---
