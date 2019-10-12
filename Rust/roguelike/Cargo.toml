@@ -6,5 +6,12 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
+[[bin]]
+#name = "part-1b-movement"
+#path = "src/part-1b-movement.rs"
+name = "part-2a-generalising"
+path = "src/part-2a-generalising.rs"
+
 [dependencies]
 tcod = "0.15.0"
