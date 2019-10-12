@@ -90,7 +90,8 @@ A bit lost on the later part of the chapter.
 ---
 ### Day 7: October 11, 2019
 
-**Today's Progress:** Today I tried to create a game in Rust (Roguelike). 
+**Today's Progress:** Today I tried to create a game in Rust (Roguelike).
+ 
 __Notes__:
 1. Author use different way to execute program (cargo run --release). I stick to cargo check
 2. Typo and syntax error. My main weakness so far. Mostly on ";" and on a lesser extend, "()".
