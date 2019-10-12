@@ -5,7 +5,7 @@ Taken from https://tomassedovic.github.io/roguelike-tutorial/index.html
 This is the first step: Graphic
 */
 
-// imposrt use statements
+// import use statements
 use tcod::colors::*;
 use tcod::console::*;
 
@@ -38,7 +38,7 @@ fn main () {
         tcod.root.clear();
         tcod.root.put_char(1, 1, '@', BackgroundFlag::None);
         tcod.root.flush(); //flush = draw everything at once
-        tcod.root.wait_for_keypress(true);
+        tcod.root.wait_for_keypress(true); // not in later tut
     }
 
 }
