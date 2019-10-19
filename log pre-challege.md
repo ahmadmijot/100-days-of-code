@@ -134,6 +134,39 @@ __*Notes Part Two*__:
 **Link to work:** [Generalising](https://tomassedovic.github.io/roguelike-tutorial/part-2-object-map.html)
 
 
+---
+### Day 9: October 19, 2019
+
+**Today's Progress:** For couple of days before, I spent time for designing 3D printed stuff, thus not having time for coding.
+
+__*Notes Part One*__:
+* Spending a significant time (on afternoon session and night session) for debugging the code. Even though there's code provided, I still get lots of compile errors
+* TYPO YPO TYPO.
+* Also, coding structure in Rust.
+* Need to brush a bit about mut, &xyz, and struct etc.
+
+__*Notes Part Two*__:
+* Change a bit about directory structure: New codes always in main.rs. After finish the part, save main.rs as part--.rs.
+* So no need to redefine what file to execute in Cargo.toml
+  
+__*Errors*__:
+1. my character doesn't move: did not put (`+=dx/+=dy`):
+    ```rs
+        pub fn move_by(&mut self, dx: i32, dy: i32, game: &Game) {
+        if !game.map[(self.x + dx) as usize][(self.y + dy) as usize].blocked {
+            self.x += dx;
+            self.y += dy;
+        }
+    }
+    ```
+2. Map didn't show room: did not replace `empty` to `wall` in `map_make` function:
+   ```
+   let mut map = vec![vec![Tile::wall(); MAP_HEIGHT as usize]; MAP_WIDTH as usize];
+   ```
+3. Todays work:
+![dungeon!](img/prog_19oct.PNG)
+
+**Link to work:** [Dungeon generators](https://tomassedovic.github.io/roguelike-tutorial/part-3-dungeon.html)
 
 ---
 ### Day : October , 2019
