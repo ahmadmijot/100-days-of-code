@@ -1,36 +1,53 @@
-//This is the part 3b: dungeons generator
+//This is the part 4a: field of views
 use std::cmp;
 
 use rand::Rng;
 use tcod::colors::*;
 use tcod::console::*;
+use tcod::map::{FovAlgorithm, Map as FovMap}; //bring tcod::map::Map type in and alias it to FovMap
 
 // actual size of windows
 const SCREEN_WIDTH: i32 = 80; 
 const SCREEN_HEIGHT: i32 = 50;
+
+//map size
+const MAP_WIDTH:i32 = 80;
+const MAP_HEIGHT:i32 = 45;
 
 // params for dungeon generator
 const ROOM_MAX_SIZE: i32 = 10;
 const ROOM_MIN_SIZE: i32 = 6;
 const MAX_ROOMS: i32 = 30;
 
-//map size
-const MAP_WIDTH:i32 = 80;
-const MAP_HEIGHT:i32 = 45;
+const FOV_ALGO: FovAlgorithm = FovAlgorithm::Basic; //default fov algo
+const FOV_LIGHT_WALLS: bool = true; //light walls or not
+const TORCH_RADIUS: i32 = 10;
 
 const LIMIT_FPS: i32 = 20;//max 20 fps
 
 // tiles colors
 const COLOR_DARK_WALL: Color = Color { r: 0, g: 0, b: 100};
+const COLOR_LIGHT_WALL: Colot = Color {
+    r: 130,
+    g: 110,
+    b: 50,
+};
 const COLOR_DARK_GROUND: Color = Color {
     r: 50,
     g: 50,
     b: 150
 };
+const COLOR_LIGHT_GROUND: Color = Color {
+    r: 200,
+    g: 180,
+    b: 50,
+};
+
 
 struct Tcod {              //encapsulate all libcotd-related values into single Struct
     root: Root,
     con: Offscreen,
+    fov: FovMap,
 }
 
 type Map = Vec<Vec<Tile>>; //a vec composed of the vecs of tiles
@@ -214,24 +231,39 @@ fn make_map(player: &mut Object) -> Map {
     map 
 }
 
-fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object]) {
+fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object], fov_recompute: bool) {
+    if fov_recompute {
+        //recompute FOV if needed (the player moved or something)
+        let player = &objects[0];
+        tcod.fov
+            .compute_fov(plaer.x,player.y, TORCH_RADIUS, FOV_LIGHT_WALLS, FOV_ALGO);
+    }
+
     // go tru all tiles, and set their background color
     for y in 0..MAP_HEIGHT {
         for x in 0..MAP_WIDTH {
+            let visible = tcod.fov.in_in_fov(x, y);
             let wall = game.map[x as usize][y as usize].block_sight;
-            if wall {
-                tcod.con
-                    .set_char_background(x, y, COLOR_DARK_WALL, BackgroundFlag::Set);
-            } else {
-                tcod.con
-                    .set_char_background(x,y, COLOR_DARK_GROUND, BackgroundFlag::Set);
-            }
+            let color = match (visible, wall) {
+                //outside fov: 
+                (false, true) => COLOR_DARK_WALL,
+                (false, false) => COLOR_DARK_GROUND,
+                //inside fov: 
+                (true, true) => COLOR_LIGHT_WALL,
+                (true, false) => COLOR_LIGHT_GROUND,
+            };
+            tcod.con
+                .set_char_background(x, y, color, BackgroundFlag::Set);
         }
     }
+
     // draw all obj in the list
     for object in objects {
-        object.draw(&mut tcod.con);
+        if tcod.fov.is_in_fov(object.x, object.y) {
+            object.draw(&mut tcod.con);
+        }
     }
+    
 
     //blit the content of "con" to the root console and present it
     blit(
@@ -244,7 +276,7 @@ fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object]) {
         1.0, // background transparency
     );
 
-}
+
 
 //-------------Keyboard handling fn
 fn handle_keys(tcod: &mut Tcod, game: &Game, player: &mut Object) -> bool {
@@ -289,7 +321,11 @@ fn main () {
 
     let con = Offscreen::new(MAP_WIDTH, MAP_HEIGHT);
         
-    let mut tcod = Tcod { root, con };
+    let mut tcod = Tcod {
+        root,
+        con: Offscreen::new(MAP_WIDTH, MAP_HEIGHT), //initialise con inline
+        fov: FovMap::new(MAP_WIDTH, MAP_HEIGHT), //initiaise (itl) fov
+         };
     
     //----- Object
     // Player, place inside first room
@@ -306,18 +342,35 @@ fn main () {
         map: make_map(&mut objects[0]),
     };
 
+    // populate the FOV map, according to the generated map
+    for y in 0..MAP_HEIGHT {
+        for x in 0..MAP_WIDTH {
+            tcod.fov.set(
+                x,
+                y,
+                !game.map[x as usize][y as usize].block_sight,
+                !game.map[x as usize][y as usize],blocked,
+            );
+        }
+    }
+
+    //force FOV "recompute" first time through the game loop
+    let mut previous_player_position = (-1, -1);
+
     while !tcod.root.window_closed() { //loop will ecxecuted x (max FPS) times
         tcod.con.clear(); //clear screen from previous frame
 
 
         //render the screen
-        render_all(&mut tcod, &game, &objects);
+        let fov_recompute = previous_player_position != (objects[0].x, objects[0].y);
+        render_all(tcod: &mut tcod, &game, &objects, fov_recompute);
 
         tcod.root.flush();
         // tcod.root.wait_for_keypress(true); 
 
         // handle keys and exit game if needed
         let player = &mut objects[0];
+        previous_player_position = (player.x, player.y);
         let exit = handle_keys(&mut tcod, &game, player);
         if exit {
             break;
