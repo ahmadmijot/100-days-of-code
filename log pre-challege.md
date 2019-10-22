@@ -169,6 +169,14 @@ __*Errors*__:
 **Link to work:** [Dungeon generators](https://tomassedovic.github.io/roguelike-tutorial/part-3-dungeon.html)
 
 ---
+### Day 10: October 23, 2019
+
+**Today's Progress:** Too tired to finish tutorial for today. Still have errors.
+
+**Link to work:** [FOV](https://tomassedovic.github.io/roguelike-tutorial/part-4-fov-exploration.html)
+
+
+---
 ### Day : October , 2019
 
 **Today's Progress:**
