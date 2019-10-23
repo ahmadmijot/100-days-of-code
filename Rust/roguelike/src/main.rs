@@ -1,4 +1,4 @@
-//This is the part 4a: field of views
+//This is the part 4b: exploration
 use std::cmp;
 
 use rand::Rng;
@@ -27,7 +27,7 @@ const LIMIT_FPS: i32 = 20;//max 20 fps
 
 // tiles colors
 const COLOR_DARK_WALL: Color = Color { r: 0, g: 0, b: 100};
-const COLOR_LIGHT_WALL: Colot = Color {
+const COLOR_LIGHT_WALL: Color = Color {
     r: 130,
     g: 110,
     b: 50,
@@ -60,6 +60,7 @@ struct Game {
 #[derive(Clone, Copy, Debug)] //implement certain behaviors/Rust = traits
 struct Tile {
     blocked: bool,
+    explored: bool,
     block_sight: bool,
 }
 
@@ -67,6 +68,7 @@ impl Tile {
     pub fn empty() -> Self {
         Tile {
             blocked: false,
+            explored: false,
             block_sight: false,
         }
     }
@@ -74,6 +76,7 @@ impl Tile {
     pub fn wall() -> Self {
         Tile {
             blocked: true,
+            explored: true,
             block_sight: true,
         }
     }
@@ -192,7 +195,7 @@ fn make_map(player: &mut Object) -> Map {
             .any( |other_room| new_room.intersects_with(other_room));
 
         if !failed {
-            // this measn there are no intersections, so this room is valid
+            // this means there are no intersections, so this room is valid
 
             //'paint' it to the map's tiles
             create_room(new_room, &mut map);
@@ -231,18 +234,18 @@ fn make_map(player: &mut Object) -> Map {
     map 
 }
 
-fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object], fov_recompute: bool) {
+fn render_all(tcod: &mut Tcod, game: &mut Game, objects: &[Object], fov_recompute: bool) {
     if fov_recompute {
         //recompute FOV if needed (the player moved or something)
         let player = &objects[0];
         tcod.fov
-            .compute_fov(plaer.x,player.y, TORCH_RADIUS, FOV_LIGHT_WALLS, FOV_ALGO);
+            .compute_fov(player.x, player.y, TORCH_RADIUS, FOV_LIGHT_WALLS, FOV_ALGO);
     }
 
     // go tru all tiles, and set their background color
     for y in 0..MAP_HEIGHT {
         for x in 0..MAP_WIDTH {
-            let visible = tcod.fov.in_in_fov(x, y);
+            let visible = tcod.fov.is_in_fov(x, y);
             let wall = game.map[x as usize][y as usize].block_sight;
             let color = match (visible, wall) {
                 //outside fov: 
@@ -252,8 +255,17 @@ fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object], fov_recompute: b
                 (true, true) => COLOR_LIGHT_WALL,
                 (true, false) => COLOR_LIGHT_GROUND,
             };
-            tcod.con
-                .set_char_background(x, y, color, BackgroundFlag::Set);
+
+            let explored = &mut game.map[x as usize][y as usize].explored;
+            if visible {
+                //since visible, explore it
+                *explored = true;
+            }
+            if *explored {
+                //show explored tiles only (any visible tile is esplored already)
+                tcod.con
+                    .set_char_background(x, y, color, BackgroundFlag::Set);
+            }
         }
     }
 
@@ -275,7 +287,7 @@ fn render_all(tcod: &mut Tcod, game: &Game, objects: &[Object], fov_recompute: b
         1.0, // foreground transparency 0.0 fully transparent, 1.0 opaque
         1.0, // background transparency
     );
-
+}
 
 
 //-------------Keyboard handling fn
@@ -337,7 +349,7 @@ fn main () {
     // list of objects with those two
     let mut objects = [player, npc];
 
-    let game = Game {
+    let mut game = Game {
         //generate map
         map: make_map(&mut objects[0]),
     };
@@ -349,7 +361,7 @@ fn main () {
                 x,
                 y,
                 !game.map[x as usize][y as usize].block_sight,
-                !game.map[x as usize][y as usize],blocked,
+                !game.map[x as usize][y as usize].blocked,
             );
         }
     }
@@ -363,7 +375,7 @@ fn main () {
 
         //render the screen
         let fov_recompute = previous_player_position != (objects[0].x, objects[0].y);
-        render_all(tcod: &mut tcod, &game, &objects, fov_recompute);
+        render_all(&mut tcod, &mut game, &objects, fov_recompute);
 
         tcod.root.flush();
         // tcod.root.wait_for_keypress(true); 
