@@ -177,8 +177,12 @@ __*Errors*__:
 
 
 ---
-### Day : October , 2019
+### Day 11: October 23, 2019
 
-**Today's Progress:**
+**Today's Progress:** 
+1. Tracking error from yesterday's activity.
+2. Culprit: "}" in line 278 part-4a-fov.rs
+3. Also detected several typos (again!): ```plaer``` -> ```player```, ```tcod.fov.in_in_fov``` -> ```tcod.fov.is_in_fov```
+4. Should not practice keyboard typing using all fingers during coding: produced lots of typos
 
 **Link to work:**
