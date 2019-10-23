@@ -184,5 +184,8 @@ __*Errors*__:
 2. Culprit: "}" in line 278 part-4a-fov.rs
 3. Also detected several typos (again!): ```plaer``` -> ```player```, ```tcod.fov.in_in_fov``` -> ```tcod.fov.is_in_fov```
 4. Should not practice keyboard typing using all fingers during coding: produced lots of typos
+5. to learn: the * in ```*explored``` (line 264 in part-4b-exploration.rs)
+6. Current code (part 5) still have errors.
 
-**Link to work:**
+**Link to work:** Until [Ownership woes](Ownership woes
+)
