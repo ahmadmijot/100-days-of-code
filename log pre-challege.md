@@ -187,5 +187,22 @@ __*Errors*__:
 5. to learn: the * in ```*explored``` (line 264 in part-4b-exploration.rs)
 6. Current code (part 5) still have errors.
 
-**Link to work:** Until [Ownership woes](Ownership woes
-)
+**Link to work:** Until Ownership woes
+
+
+---
+### Day 12: October 24, 2019
+
+**Today's Progress:**
+1. Apparently yesterday's error was due to my ```cargo check``` too early, should read whole section of tutorial before check.
+2. Still have error when commit. fix later.
+
+**Link to work:** [Fin part-5](https://tomassedovic.github.io/roguelike-tutorial/part-5-combat.html)
+
+
+---
+### Day : October , 2019
+
+**Today's Progress:**
+
+**Link to work:**
