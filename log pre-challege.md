@@ -201,7 +201,22 @@ __*Errors*__:
 
 
 ---
-### Day : October , 2019
+### Day 12.5: November 5, 2019
+
+**Today's Progress:**
+- Last few days I try to understand about the concept of Rust ownership.
+- Also install and read about Unity since I wanted to use AR concept in my poster presentation.
+- For now, I may need to stop for a time regarding Rust Roguelike tutorial since I kinda lost in grasping the concept of Rust programming.
+- May need to do bit about link list tutorial.
+- Today and yesterday I tried to use Python to convert LEGO Digital Designer gile (.dxf) to .obj or .stl.
+- It need to run some script (pyldd2obj.py)
+- But boy I can't run it using git-bash.
+- Tried to install miniconda but it screwed up with my git bash setting.
+
+**Link to work:**
+
+---
+### Day : November , 2019
 
 **Today's Progress:**
 
