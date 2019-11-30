@@ -14,3 +14,8 @@ The log of my Pre-#100DaysOfCode challenge. Started on [Sept 26 2019].
 
 1. Change tutorial from A Gentle Intro to [Rust to The Rust Programming Language by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/index.html#the-rust-programming-language) since it cover about Rust from very basic.
 2. Cover [Chapter 2: Programming a Guessing Game](https://www.simonpbriggs.co.uk/rust.pdf)
+
+### R1D0 [30th Nov 2019]
+
+1. Start Flask tutorial [The Flask Mega-Tutorial Part I: Hello, World!] (<https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>)
+2. Finish part 1
