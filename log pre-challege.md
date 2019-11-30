@@ -216,8 +216,11 @@ __*Errors*__:
 **Link to work:**
 
 ---
-### Day : November , 2019
+### Day 13: November 30, 2019
 
-**Today's Progress:**
+**Today's Progress:** Wow 25 days off. Yesterday I started touching Microsoft [Microsoft Power App tutorial](https://docs.microsoft.com/en-us/learn/modules/get-started-with-powerapps/2-powerapps-building-blocks). Motivation:
+1. Rust Roguelike tutorial seems no direct stuff that I can use in my project. And it's seems alot harder to understand. Thus need to take a break.
+2. I interested in building static website since some ask me to do some stuff regarding setting a site for them.
+3. I need to brush up my Python language.
 
 **Link to work:**
