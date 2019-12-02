@@ -259,18 +259,27 @@ __*Errors*__:
 1. Understand about {% %} jinja2
 2. Understand and use template inheritance (base.html)
 3. Jinja2 functions:
-   '''html
+
+   ```python
+   {%...%} = statements
+   {{...}} = expressions
+   {#...#} = comments
+   #...## = line statements
+
    {% if %} {% else %} {% endif %}
    {% for x in y %} {% endfor %}
    {% extends %}
    {% block x %} {% endblock %}
-   '''
+   ```
+
 4. For yesterday's code:
    1. How to execute Flask
    2. How to run flask without type FLASK_APP everytime: create bew file .flaskenv on the top level and write:
-   '''txt
+
+   ```text
    FLASK_APP=microblog.py
-   '''
-5. Use venv although still not clear about it yet.
+   ```
+
+5. Use `venv` although still not clear about it yet.
 
 **Link to work:** [Flask Mega Tutorial Part 2](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates)
