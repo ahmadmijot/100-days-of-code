@@ -292,3 +292,6 @@ __*Errors*__:
 
 1. Learn about creating form in Flask
 2. Learn about field valication and generating links
+3. Create database using flask-sqlalchemy and db migration using flask-migrate
+
+**Link to worl:** [Flask Mega Tutprial Part 4: Database](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) Before "Creating The Migration Repository section
