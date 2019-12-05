@@ -283,3 +283,12 @@ __*Errors*__:
 5. Use `venv` although still not clear about it yet.
 
 **Link to work:** [Flask Mega Tutorial Part 2](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates)
+
+---
+
+### Day 15-16: November 5, 2019
+
+**Today's Progress:** Continue learning about Flask.
+
+1. Learn about creating form in Flask
+2. Learn about field valication and generating links
