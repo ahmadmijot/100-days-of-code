@@ -294,4 +294,15 @@ __*Errors*__:
 2. Learn about field valication and generating links
 3. Create database using flask-sqlalchemy and db migration using flask-migrate
 
-**Link to worl:** [Flask Mega Tutprial Part 4: Database](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) Before "Creating The Migration Repository section
+**Link to work:** [Flask Mega Tutprial Part 4: Database](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) Before "Creating The Migration Repository section
+
+---
+### Day 17: Dec 17, 2019
+
+**Today's Progress:** Start learning Gatsby.
+
+1. Yes, abandoning another tutorial (Flask)
+2. Start exploring Gatsby and 11ty
+3. Maybe try to build conference website later on
+
+**Link to work:** [Building with components](https://www.gatsbyjs.org/tutorial/part-one/#building-with-components)
