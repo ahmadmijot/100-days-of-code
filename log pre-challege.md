@@ -297,6 +297,7 @@ __*Errors*__:
 **Link to work:** [Flask Mega Tutprial Part 4: Database](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) Before "Creating The Migration Repository section
 
 ---
+
 ### Day 17: Dec 17, 2019
 
 **Today's Progress:** Start learning Gatsby.
@@ -306,3 +307,17 @@ __*Errors*__:
 3. Maybe try to build conference website later on
 
 **Link to work:** [Building with components](https://www.gatsbyjs.org/tutorial/part-one/#building-with-components)
+
+---
+
+### Day 18: Dec 18, 2019
+
+**Today's Progress:** Continue exploring Gatsby
+
+1. Learn about (React) components
+2. ```gatsby develop`` for hot loading
+3. ```gatsby build``` for building site/prepare to upload to surge.sh
+4. ```surge public/``` to upload site to surge.sh (future-fuel.surge.sh)
+5. Learn about upload site content to surge.sh
+
+**Link to next part:** [Gatsby tutorial Part Two](https://www.gatsbyjs.org/tutorial/part-two/)
